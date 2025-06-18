@@ -43,14 +43,7 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -68,20 +61,20 @@
         right_layer {
             display-name = "NUM & NAVIGATION";
             bindings = <
-&kp GRAVE  &kp LS(PLUS)  &kp MINUS     &kp EQUAL      &trans          &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp N0
-&kp LBKT   &kp RBKT      &kp LS(LPAR)  &kp LS(RPAR)   &kp LS(EXCL)    &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &kp SQT
-&trans     &trans        &kp SQT       &kp BACKSLASH  &trans          &kp PG_DN  &trans    &trans    &kp SLASH  &trans
-                                       &trans         &trans          &trans     &trans
+&kp GRAVE  &kp LS(PLUS)  &kp MINUS     &kp EQUAL     &kp EXCLAMATION    &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans
+&kp LBKT   &kp RBKT      &kp LS(LPAR)  &kp LS(RPAR)  &trans             &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans     &trans        &trans        &trans        &trans             &kp PG_DN  &trans    &trans    &kp SLASH  &trans
+                                       &trans        &trans             &trans     &trans
             >;
         };
 
         left_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET  &kp N7  &kp N8  &kp N9  &kp TILDE
-&kp DQT   &kp LBKT  &kp LBRC  &kp LPAR  &bt BT_CLR    &kp FSLH   &kp N4  &kp N5  &kp N6  &kp SEMI
-&kp SQT   &kp RBKT  &kp RBRC  &kp RPAR  &trans        &kp N0     &kp N1  &kp N2  &kp N3  &kp QMARK
-                              &trans    &trans        &trans     &trans
+&trans  &kp N7  &kp N8  &kp N9  &trans          &kp C_VOLUME_UP  &trans          &trans            &trans         &bt BT_CLR
+&trans  &kp N4  &kp N5  &kp N6  &trans          &kp C_VOL_DN     &trans          &trans            &kp SEMICOLON  &kp SQT
+&kp N0  &kp N1  &kp N2  &kp N3  &kp CAPSLOCK    &kp K_MUTE       &kp K_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT     &trans
+                        &trans  &trans          &trans           &trans
             >;
         };
     };
